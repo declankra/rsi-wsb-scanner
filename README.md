@@ -1,0 +1,1 @@
+## test files to interact with reddit and alphavantag APIs for use in a stock analysis tool
