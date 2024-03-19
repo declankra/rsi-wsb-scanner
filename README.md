@@ -6,7 +6,6 @@
     finds percent of posts mentioning specificed ticker in last 48 hours relative to mentions in past 30
         so its how 'popular' a particular ticker in the past 48 hours based on its 30 day popularity
 
-  
 ### strengthCommentsLimited.py 
     finds proxy percent of comments in daily thread that mention specified tickers
         stopped functioning - wsb subreddit removed filter flair
