@@ -23,7 +23,7 @@ def find_daily_discussion_comments(ticker, subreddit="wallstreetbets"):
             submission.comments.replace_more(limit=20)  # Attempt to load up to 1000 comments
             comment_list = submission.comments.list()
             # If the list is too large, slice it to the first 1000 comments
-            comment_list = comment_list[:1000]
+            comment_list = comment_list[:2000]
             for comment in comment_list:
                 total_comments += 1
                 if ticker.lower() in comment.body.lower():
