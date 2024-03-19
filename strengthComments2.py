@@ -1,10 +1,15 @@
 from datetime import datetime, timedelta
 import praw
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize PRAW with your Reddit app credentials
-reddit = praw.Reddit(client_id='QyyiKi73QvFJqi_nX9ALQg',
-                     client_secret='njKqQqY8r2JEn_V4SuWrg1uNn2FJig',
-                     user_agent='fetchWSB')
+reddit = praw.Reddit(client_id= os.getenv('REDDIT_CLIENT'),
+                     client_secret= os.getenv('REDDIT_SECRET'),
+                     user_agent=os.getenv('REDDIT_USER_AGENT'))
 
 def find_daily_discussion_comments(ticker, subreddit="wallstreetbets"):
     """Find the percentage of comments mentioning the ticker in the nearest past Daily Discussion thread."""

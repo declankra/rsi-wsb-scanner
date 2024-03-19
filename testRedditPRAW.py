@@ -1,10 +1,15 @@
 import praw
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize PRAW with your Reddit app credentials
-reddit = praw.Reddit(client_id='QyyiKi73QvFJqi_nX9ALQg',
-                     client_secret='njKqQqY8r2JEn_V4SuWrg1uNn2FJig',
-                     user_agent='fetchWSB')
+reddit = praw.Reddit(client_id= os.getenv('REDDIT_CLIENT'),
+                     client_secret= os.getenv('REDDIT_SECRET'),
+                     user_agent=os.getenv('REDDIT_USER_AGENT'))
 
 def fetch_title_mentions(ticker, days_ago, subreddit="wallstreetbets", limit=None):
     """Fetch the number of mentions for the given ticker and time frame."""

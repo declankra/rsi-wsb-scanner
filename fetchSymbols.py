@@ -1,5 +1,10 @@
 import requests
 import json
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 def fetch_stocks(api_key):
     url = f"https://financialmodelingprep.com/api/v3/stock/list?apikey={api_key}"
@@ -23,7 +28,7 @@ def save_to_json(data, filename):
         json.dump(data, f, indent=4)
 
 # Use your API key here
-api_key = 'Ke0ioOh8J93IRZJc1UDaTHMJSsf0JIMg'
+api_key = os.getenv('AV_API_KEY')
 filtered_stocks = fetch_stocks(api_key)
 
 print(f"Found {len(filtered_stocks)} stocks on NYSE Arca or NASDAQ Global Market with price > $5.")

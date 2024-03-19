@@ -1,5 +1,10 @@
 import requests
 import json
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 def fetch_filtered_stocks(api_key):
     url = "https://financialmodelingprep.com/api/v3/stock-screener"
@@ -25,7 +30,7 @@ def save_to_json(data, filename):
         json.dump(data, f, indent=4)
 
 # Use your API key here
-api_key = 'your_api_key_here'
+api_key = os.getenv('AV_API_KEY')
 filtered_stocks = fetch_filtered_stocks(api_key)
 
 print(f"Found {len(filtered_stocks)} stocks matching criteria.")
