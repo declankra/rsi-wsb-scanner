@@ -24,6 +24,12 @@
 ## alphavantage scripts
 
 ### fetchSymbols.py
-    returns json of non-penny stocks (price > 5$) in the NYSE & NASDAQ 
+    returns json filtering for non-penny stocks (price > 5$) in the NYSE & NASDAQ
+        endpoint used: https://financialmodelingprep.com/api/v3/stock/list
+        ** live data at time of call
+        info in json: symbol, price, name, exchange, type
 
 
+### stockScreener.py
+    returns json filtering based on predefined criteria
+        endpoint used: https://financialmodelingprep.com/api/v3/stock-screener
