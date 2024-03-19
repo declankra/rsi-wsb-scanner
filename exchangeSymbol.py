@@ -31,10 +31,10 @@ def save_to_json(data, filename):
 
 # Use your API key here
 api_key = os.getenv('FM_API_KEY')
-exchanges = ['nyse', 'nasdaq', 'amex']
+exchanges = ['nyse', 'nasdaq'] ## removed amex
 all_filtered_symbols = []
 
-for exchange in ['nyse', 'nasdaq', 'amex']:
+for exchange in exchanges:
     symbols = fetch_symbols_for_exchange(api_key, exchange)  # fetch_symbols_for_exchange should already be defined
     filtered_symbols = filter_symbols(symbols)  # Now uses the updated filtering criteria
     all_filtered_symbols.extend(filtered_symbols)
