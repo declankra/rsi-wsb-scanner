@@ -46,4 +46,4 @@ for stock in all_filtered_stocks[:10]:
     print(stock['symbol'])
 
 # Save the combined list of filtered stocks to a JSON file
-save_to_json(all_filtered_stocks, 'filtered_stocks.json')
+save_to_json(all_filtered_stocks, 'screened_stocks.json')

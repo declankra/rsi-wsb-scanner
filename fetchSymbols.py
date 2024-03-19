@@ -37,5 +37,5 @@ for stock in filtered_stocks[:10]:
     print(f"Symbol: {stock['symbol']}, Price: {stock['price']}")
 
 # Save the filtered stocks to a JSON file
-save_to_json(filtered_stocks, 'filtered_stocks.json')
+save_to_json(filtered_stocks, 'fetched_symbol_list_stocks.json')
 
