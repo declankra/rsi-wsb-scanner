@@ -20,7 +20,7 @@ def filter_symbols(symbols):
     # Filter symbols with safety checks for None values
     filtered = [
         symbol for symbol in symbols
-        if (symbol.get('price') or 0) > 5 and (symbol.get('volume') or 0) > 1000 and (symbol.get('marketCap') or 0) > 1000000
+        if (symbol.get('price') or 0) > 5 and (symbol.get('volume') or 0) > 500000 and (symbol.get('marketCap') or 0) > 300000000
     ]
     return filtered
 

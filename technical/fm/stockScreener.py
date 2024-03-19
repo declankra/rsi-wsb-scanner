@@ -10,9 +10,9 @@ def fetch_filtered_stocks_for_exchange(api_key, exchange):
     url = "https://financialmodelingprep.com/api/v3/stock-screener"
     params = {
         'apikey': api_key,
-        'marketCapMoreThan': 10000000,
-        'priceMoreThan': 10,
-        'volumeMoreThan': 10000,
+        'marketCapMoreThan': 300000000,
+        'priceMoreThan': 5,
+        'volumeMoreThan': 500000,
         'isEtf': False,
         'isFund': False,
         'isActivelyTrading': 'true',
