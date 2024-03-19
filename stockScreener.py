@@ -32,7 +32,7 @@ def save_to_json(data, filename):
 
 # Use your API key here
 api_key = os.getenv('FM_API_KEY')
-exchanges = ['nyse', 'nasdaq', 'amex']
+exchanges = ['nyse', 'nasdaq'] ## not including amex
 all_filtered_stocks = []
 
 for exchange in exchanges:
