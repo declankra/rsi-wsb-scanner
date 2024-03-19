@@ -33,3 +33,5 @@
 ### stockScreener.py
     returns json filtering based on predefined criteria
         endpoint used: https://financialmodelingprep.com/api/v3/stock-screener
+        ** limited to 1000 results per call, so only 1000 per exchange
+            criteria would need to be more specific

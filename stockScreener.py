@@ -11,12 +11,13 @@ def fetch_filtered_stocks_for_exchange(api_key, exchange):
     params = {
         'apikey': api_key,
         'marketCapMoreThan': 10000000,
-        'priceMoreThan': 5,
-        'volumeMoreThan': 1000,
+        'priceMoreThan': 10,
+        'volumeMoreThan': 10000,
         'isEtf': False,
         'isFund': False,
         'isActivelyTrading': 'true',
-        'exchange': exchange
+        'exchange': exchange,
+        'limit': None
     }
     response = requests.get(url, params=params)
     if response.status_code == 200:
