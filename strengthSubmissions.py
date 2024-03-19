@@ -40,4 +40,4 @@ def calculate_relative_strength(ticker):
 # Example usage
 ticker = "smci"  # Replace with the actual ticker
 relative_strength = calculate_relative_strength(ticker)
-print(f"Relative Strength for {ticker} in Title or Body: {relative_strength}")
+print(f"Relative Strength for {ticker} in Submission title or body: {relative_strength}")
