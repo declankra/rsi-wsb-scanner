@@ -28,7 +28,7 @@ def save_to_json(data, filename):
         json.dump(data, f, indent=4)
 
 # Use your API key here
-api_key = os.getenv('AV_API_KEY')
+api_key = os.getenv('FM_API_KEY')
 filtered_stocks = fetch_stocks(api_key)
 
 print(f"Found {len(filtered_stocks)} stocks on NYSE Arca or NASDAQ Global Market with price > $5.")
