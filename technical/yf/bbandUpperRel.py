@@ -34,7 +34,7 @@ def calculate_bollinger_band_percentage_recent(ticker, end_date):
     return most_recent_data[['Close', 'Upper_Band_10', 'Percent_Above_Upper_10', 'Upper_Band_20', 'Percent_Above_Upper_20']]
 
 # Example usage
-ticker = "NVDA"
+ticker = "HAS"
 end_date = datetime.today()
 
 recent_data = calculate_bollinger_band_percentage_recent(ticker, end_date)
