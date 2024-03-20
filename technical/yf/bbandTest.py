@@ -22,8 +22,8 @@ def calculate_bollinger_band_percentage(ticker, start_date, end_date):
     return stock_data[['Close', 'Upper_Band', 'Percent_Above_Upper']]
 
 # Step 2: Example usage
-ticker = "SG"  # Example: Apple Inc.
-start_date = "2023-01-01"
+ticker = "HAS"  # Example: Apple Inc.
+start_date = "2024-02-01"
 end_date = "2024-03-19"
 
 result = calculate_bollinger_band_percentage(ticker, start_date, end_date)
