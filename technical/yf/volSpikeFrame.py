@@ -17,7 +17,7 @@ def volume_spike(symbol):
     data = fetch_stock_data(symbol)
     recent_volume = data['Volume'].iloc[-1]
 
-    periods = [365, 60, 30, 10, 5]  # Representing 52 weeks, 60, 30, 10, and 5 days
+    periods = [365, 60, 21, 10, 5]  # Representing 52 weeks, 60, 30, 10, and 5 days
 
     # Initialize an empty DataFrame to store results
     results_df = pd.DataFrame(columns=['Period', 'Average_Volume', 'Most_Recent_Volume', 'Percent_Difference'])
