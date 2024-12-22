@@ -47,7 +47,7 @@ def calculate_stoch(stock_symbol, threshold_value):
     return output_df
 
 # Variables defined within the script
-stock_symbol = "HAS"  # Example stock symbol
+stock_symbol = "PLD"  # Example stock symbol
 threshold_value = 80   # Adjusted example threshold value for demonstration
 
 # Calculate Stoch and print DataFrame

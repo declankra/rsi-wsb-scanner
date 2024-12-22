@@ -24,7 +24,7 @@ def fetch_and_calculate_rsi(symbols, threshold, period=14):
     return rsi_values
 
 # Example usage
-symbols = ['AAPL', 'MSFT', 'GOOGL', 'BNIX']  # Add your stock symbols here
+symbols = ['GME', 'MSFT', 'GOOGL', 'BNIX']  # Add your stock symbols here
 threshold = 89 # rsi criteria
 rsi_values = fetch_and_calculate_rsi(symbols, threshold)
 print(rsi_values)
